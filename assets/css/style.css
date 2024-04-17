@@ -1,0 +1,62 @@
+@import url("../fonts/Inter/stylesheet.css");
+*{
+    margin: 0;
+    padding: 0;
+    border: 1;
+    font-size: 120%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body{
+    font-family: "Inter";
+}
+.site{
+    width: 100%;
+}
+.container{
+    width: 100%;
+    max-width: 1620px;
+    margin: 0 auto;
+}
+.site-header{
+    width: 100%;
+    background-color: #fff;
+    background-image: url("../img/headerBG.png");
+    background-blend-mode: multiply;
+    box-shadow: 1px 1px 20px #000;
+}
+.site-header-main{
+    display: flex;
+    align-items: center;
+}
+.site-header-logo{
+    width: 100%;
+    max-width: 550px;
+}
+.site-header-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 625px;
+}
+.site-header-menu__link{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+.site-header-callback{
+    position: absolute;
+    top: 33px;
+    right: 0;
+    padding: 15px 30px;
+    background-color: #0E153C;
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px;
+    width: 100%;
+    max-width: 452px;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+}
