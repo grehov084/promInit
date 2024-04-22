@@ -358,7 +358,7 @@ body{
                         "first-item third-item fourth-item"
                         "fiths-item sixth-item fourth-item"
                         "seventh-item sixth-item eigths-item";
-    grid-template-columns: 33% 40%;
+    grid-template-columns: 40% 40%;
     grid-template-rows: 268px 408px 402px;
 }
 .news-item{
@@ -366,7 +366,7 @@ body{
     width: 100%;
 }
 .news-item:nth-child(1){
-    max-width: 610px;
+    max-width: 645px;
     height: 680px;
     grid-area: first-item;
 }
@@ -405,7 +405,7 @@ body{
     grid-row: 3 / span 2;
     align-self: end;
 }
-.news-item:nth-child(8){
+.news-item:nth-child(8){    
     max-width: 336px;
     height: 316px;
     grid-area: eigths-item;
