@@ -350,6 +350,9 @@ body{
     height: 300px;  
     background-color: var(--main-color);
 }
+.news__title{
+    margin-bottom: 60px;
+}
 .news-content{
     display: grid;
     grid-row-gap: 10px;
@@ -358,12 +361,28 @@ body{
                         "first-item third-item fourth-item"
                         "fiths-item sixth-item fourth-item"
                         "seventh-item sixth-item eigths-item";
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 40% 39%;
     grid-template-rows: 268px 408px 402px;
 }
 .news-item{
-    border: 2px solid #000;
     width: 100%;
+    display: flex;
+    align-items: end;
+    border-radius: 5px;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+.news-item:not(:last-child){
+    cursor: pointer;
+}
+.news-item:not(:last-child .news-item--elecric){
+    background-image: url("../img/newsBG.png");
+    background-size: cover;
+}
+.news-item--elecric{
+    background-image: url("../img/electricBG.png");
+    background-size: cover;
 }
 .news-item:nth-child(1){
     max-width: 645px;
@@ -386,7 +405,7 @@ body{
     grid-area: fourth-item;
 }
 .news-item:nth-child(5){
-    max-width: 673px;
+    max-width: 761px;
     height: 228px;
     grid-area: fiths-item;
     grid-column: 1/span 2;
@@ -398,7 +417,7 @@ body{
     justify-self: end;
 }
 .news-item:nth-child(7){
-    max-width: 673px;
+    max-width: 761px;
     height: 490px;
     grid-area: seventh-item;
     grid-column: 1 / span 2;
@@ -410,6 +429,23 @@ body{
     height: 316px;
     grid-area: eigths-item;
 }
+.news-item__title{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.news-item__description{
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center;
+}
+.news-item-content{
+    padding: 0 46px 37px 46px;
+    width: 100%;
+}
 @media screen {
     .tender__button:hover,
     .content-form__button:hover{
@@ -417,5 +453,8 @@ body{
     }
     .content-form__file-button:hover{
         background-color: #0c1336;
+    }
+    .news-item:not(:last-child):hover{
+        transform: scale(1.03);
     }
 }
