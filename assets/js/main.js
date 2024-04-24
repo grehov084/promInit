@@ -2,6 +2,8 @@ let inputs = document.querySelectorAll('.content-form__file'),
 inputCommers, inputAny;
 inputCommers = document.querySelector(".content-form-type__item:nth-child(1)");
 inputAny = document.querySelector(".content-form-type__item:nth-child(2)");
+arrowRight = document.querySelector(".slider-arrow--right");
+arrowLeft = document.querySelector(".slider-arrow--left");
 Array.prototype.forEach.call(inputs, function (input) {
   let label = input.nextElementSibling,
     labelVal = label.querySelector('.content-form__file-button-text').innerText;
@@ -25,7 +27,13 @@ inputCommers.addEventListener("click", ()=>{
 });
 inputAny.addEventListener("click", ()=>{
     inputCommers.classList.remove("--active");
-    if(!inputAny.classList.contains("-active")){
+    if(!inputAny.classList.contains("--active")){
         inputAny.classList.add("--active");
     }
+});
+arrowLeft.addEventListener("click", ()=>{
+  console.log("Left");
+});
+arrowRight.addEventListener("click", ()=>{
+  console.log("Right");
 });
