@@ -34,7 +34,7 @@ inputAny.addEventListener("click", ()=>{
 
 
 
-let currentIndex = 0;
+let currentIndex = 0, translateVal;
 const carouselItems = document.querySelectorAll('.slider__item');
  
 function goToSlide(index, click) {
@@ -44,12 +44,22 @@ function goToSlide(index, click) {
     index = 0;
   }
   currentIndex = index;
-  console.log(click);
+  translateVal = carouselItems[0].offsetWidth;
   if(click == "left"){
-    document.querySelector('.slider-container').style.transform = `translateX(-${carouselItems[0].offsetWidth}px)`;
+        document.querySelector('.slider__item--before').style.transform = `translate3d(${translateVal}px, 0px, 0px)`;
+        document.querySelector('.slider__item--before').style.transformOrigin = `${translateVal/2}px`;
+        document.querySelector('.slider__item--current').style.transform = `translate3d(${translateVal}px, 0px, 0px)`;
+        document.querySelector('.slider__item--current').style.transformOrigin = `${translateVal/2}px`;
+        document.querySelector('.slider__item--after').style.transform = `translate3d(${translateVal}px, 0px, 0px)`;
+        document.querySelector('.slider__item--after').style.transformOrigin = `${translateVal/2}px`;
   }
   else if(click == "right"){
-    document.querySelector('.slider-container').style.transform = `translateX(${carouselItems[0].offsetWidth}px)`;
+      document.querySelector('.slider__item--before').style.transform = `translate3d(-${translateVal}px, 0px, 0px)`;
+      document.querySelector('.slider__item--before').style.transformOrigin = `${translateVal/2}px`;
+      document.querySelector('.slider__item--current').style.transform = `translate3d(-${translateVal}px, 0px, 0px)`;
+      document.querySelector('.slider__item--current').style.transformOrigin = `${translateVal/2}px`;
+      document.querySelector('.slider__item--after').style.transform = `translate3d(-${translateVal}px, 0px, 0px)`;
+      document.querySelector('.slider__item--after').style.transformOrigin = `${translateVal/2}px`;
   }
 }
  

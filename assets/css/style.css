@@ -481,6 +481,7 @@ body{
     width: 652px;
     height: 362px;
     border: 2px solid;
+    transition: 0.5s;
 }
 .slider-left, .slider-right{
     width: 50px;
