@@ -474,6 +474,8 @@ body{
     width: 1400%;
     display: flex;
     gap: 50px;
+    position: relative;
+    transition: 0.5s;
 }
 .slider__item{
     width: 652px;
@@ -513,6 +515,12 @@ body{
     top: -10px;
     border-radius: 50%;
     left: -5px;
+}
+.slider__item--before{
+    border-color: red;
+}
+.slider__item--after{
+    border-color: green;
 }
 @media screen {
     .tender__button:hover,
