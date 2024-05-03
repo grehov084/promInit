@@ -479,11 +479,14 @@ body{
     width: 1400%;
     display: flex;
     gap: 50px;
+    position: relative;
+    transition: 0.5s;
 }
 .slider__item{
     width: 652px;
     height: 362px;
     border: 2px solid;
+    transition: 0.5s;
 }
 .slider-left, .slider-right{
     width: 50px;
@@ -721,6 +724,14 @@ body{
         top: 4035px;
         width: 100%;
         max-width: 1152px;
+    }
+    .site-line--protfolio:nth-child(1){
+        width: 100%;
+        max-width: 545px;
+        height: 30px;
+        border-bottom: 7px var(--solid-border);
+        border-right: 7px var(--solid-border);
+        top: 4170px;
     }
 }
 @media screen {

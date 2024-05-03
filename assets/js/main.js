@@ -31,9 +31,41 @@ inputAny.addEventListener("click", ()=>{
         inputAny.classList.add("--active");
     }
 });
+
+
+
+let currentIndex = 0, translateVal;
+const carouselItems = document.querySelectorAll('.slider__item');
+ 
+function goToSlide(index, click) {
+  if (index < 0) {
+    index = carouselItems.length - 1;
+  } else if (index >= carouselItems.length) {
+    index = 0;
+  }
+  currentIndex = index;
+  translateVal = carouselItems[0].offsetWidth;
+  if(click == "left"){
+        document.querySelector('.slider__item--before').style.transform = `translate3d(${translateVal}px, 0px, 0px)`;
+        document.querySelector('.slider__item--before').style.transformOrigin = `${translateVal/2}px`;
+        document.querySelector('.slider__item--current').style.transform = `translate3d(${translateVal}px, 0px, 0px)`;
+        document.querySelector('.slider__item--current').style.transformOrigin = `${translateVal/2}px`;
+        document.querySelector('.slider__item--after').style.transform = `translate3d(${translateVal}px, 0px, 0px)`;
+        document.querySelector('.slider__item--after').style.transformOrigin = `${translateVal/2}px`;
+  }
+  else if(click == "right"){
+      document.querySelector('.slider__item--before').style.transform = `translate3d(-${translateVal}px, 0px, 0px)`;
+      document.querySelector('.slider__item--before').style.transformOrigin = `${translateVal/2}px`;
+      document.querySelector('.slider__item--current').style.transform = `translate3d(-${translateVal}px, 0px, 0px)`;
+      document.querySelector('.slider__item--current').style.transformOrigin = `${translateVal/2}px`;
+      document.querySelector('.slider__item--after').style.transform = `translate3d(-${translateVal}px, 0px, 0px)`;
+      document.querySelector('.slider__item--after').style.transformOrigin = `${translateVal/2}px`;
+  }
+}
+ 
 arrowLeft.addEventListener("click", ()=>{
-  console.log("Left");
+  goToSlide(currentIndex - 1, "left");
 });
 arrowRight.addEventListener("click", ()=>{
-  console.log("Right");
+  goToSlide(currentIndex + 1, "right");
 });
