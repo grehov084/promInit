@@ -75,6 +75,8 @@ body{
 .site-main-content{
     width: 100%;
     padding-top: 211px;
+    position: relative;
+    z-index: 1;
 }
 .content-top-left{
     width: 100%;
