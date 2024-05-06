@@ -1350,6 +1350,20 @@ body{
     .tender__text{
         max-width: 80%;
     }
+    .contacts-content {
+        max-width: 337px;
+    }
+    .contacts-text-bottom{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .contacts-link{
+        align-items: center;
+    }
+    .contacts-figure{
+        justify-content: center;
+        gap: 10px;
+    }
 }
 @media screen {
     .tender__button:hover,
