@@ -1,9 +1,11 @@
 let inputs = document.querySelectorAll('.content-form__file'),
-inputCommers, inputAny;
+inputCommers, inputAny, menuToggle, menuContent;
 inputCommers = document.querySelector(".content-form-type__item:nth-child(1)");
 inputAny = document.querySelector(".content-form-type__item:nth-child(2)");
 arrowRight = document.querySelector(".slider-arrow--right");
 arrowLeft = document.querySelector(".slider-arrow--left");
+menuToggle = document.querySelector(".site-header-toggle");
+menuContent = document.querySelector(".site-header-mobile-content");
 Array.prototype.forEach.call(inputs, function (input) {
   let label = input.nextElementSibling,
     labelVal = label.querySelector('.content-form__file-button-text').innerText;
@@ -31,7 +33,14 @@ inputAny.addEventListener("click", ()=>{
         inputAny.classList.add("--active");
     }
 });
-
+menuToggle.addEventListener("click", ()=>{
+    if(!menuContent.hasAttribute("style")){
+      menuContent.style.cssText = "transform:translate(0, 0%)";
+    }
+    else{
+      menuContent.removeAttribute("style");
+    }
+});
 
 
 let currentIndex = 0, translateVal;
