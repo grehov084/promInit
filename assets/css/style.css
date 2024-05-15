@@ -542,7 +542,6 @@ body{
 }
 .site-line{
     position: absolute;
-    display: none;
 }
 .site-line--left{
     left: 0;
@@ -1368,6 +1367,24 @@ body{
     .contacts-figure{
         justify-content: center;
         gap: 10px;
+    }
+    .content-form {
+        max-width: 320px;
+    }
+    .content-form-type__item{
+        font-size: 18px;
+    }
+}
+@media(max-width: 350px){
+    .content-form {
+        max-width: 270px;
+    }
+    .content-form-title{
+        font-size: 32px;
+    }
+    .content-form__file{
+        position: unset;
+        width: 100%;
     }
 }
 @media screen {
